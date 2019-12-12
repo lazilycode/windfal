@@ -8,11 +8,17 @@ import "amfe-flexible";
 import "./styles/reset.css";
 import "./icons";
 import "./plugins/vant.js";
+import "vant/lib/index.css";
 
 FastClick.attach(document.body);
 
-Vue.config.productionTip = false;
+import { Row, Col, RadioGroup, Radio } from "vant";
 
+Vue.use(Row).use(Col);
+Vue.use(RadioGroup);
+Vue.use(Radio);
+
+Vue.config.productionTip = false;
 new Vue({
   router,
   store,
